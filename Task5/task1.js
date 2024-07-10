@@ -1,6 +1,6 @@
 // Завдання 1: Визначення рівня успішності студента
 
-const AVERAGE_GRADE = 85;
+const AVERAGE_GRADE = 80;
 
 if (AVERAGE_GRADE < 60) {
   console.log("Unsatisfactory");
