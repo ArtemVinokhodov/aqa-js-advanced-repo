@@ -21,8 +21,8 @@ export class Book {
   }
 
   set author(value) {
-    if (typeof value !== "string" || value.trim() === "") {
-      throw new Error("Invalid author");
+    if (typeof value !== "string") {
+      throw new Error("Need input string title");
     }
     this._author = value;
   }

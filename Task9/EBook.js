@@ -11,8 +11,8 @@ export class EBook extends Book {
   }
 
   set fileFormat(value) {
-    if (typeof value !== "string" || value.trim() === "") {
-      throw new Error("Invalid file format");
+    if (typeof value !== "string") {
+      throw new Error("Need input string title");
     }
     this._fileFormat = value;
   }
