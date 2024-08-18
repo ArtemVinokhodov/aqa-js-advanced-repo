@@ -9,9 +9,9 @@
 
 const student = {};
 
-student.firstName = "John";
-student.lastName = "Johnovich";
+student.firstName = 'John';
+student.lastName = 'Johnovich';
 student.age = 200;
-student.courses = ["Математика", "Історія", "Програмування"];
+student.courses = ['Математика', 'Історія', 'Програмування'];
 
 console.log(student);

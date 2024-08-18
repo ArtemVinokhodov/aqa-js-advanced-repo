@@ -9,19 +9,19 @@
 // Огорніть кожен окремий виклик функції divide в try…catch.Використовуючи блок finally, виведіть повідомлення "Робота завершена" в консоль, навіть якщо помилка виникла або не виникла.
 
 function divide(numerator, denominator) {
-    try {
-        if (typeof numerator !== 'number' || typeof denominator !== 'number') {
-            throw new Error("Both arguments must be numbers.");
-        }
-        if (denominator === 0) {
-            throw new Error("Cannot be zero.");
-        }
-        return console.log(numerator / denominator);
-    } catch (error) {
-        console.log(`${error}`);
-    } finally {
-        console.log("Mission completed");
-    }
+	try {
+		if (typeof numerator !== 'number' || typeof denominator !== 'number') {
+			throw new Error('Both arguments must be numbers.');
+		}
+		if (denominator === 0) {
+			throw new Error('Cannot be zero.');
+		}
+		return console.log(numerator / denominator);
+	} catch (error) {
+		console.log(`${error}`);
+	} finally {
+		console.log('Mission completed');
+	}
 }
 
 divide(10, 2);

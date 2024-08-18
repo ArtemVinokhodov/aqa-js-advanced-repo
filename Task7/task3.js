@@ -8,8 +8,6 @@
 // Використовуючи метод reduce, обчисліть суму всіх елементів масиву.
 // Виведіть отриману суму на консоль.
 
-
-
 const numbersArray = [10, 20, 30, 40, 50];
 const sum = numbersArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 

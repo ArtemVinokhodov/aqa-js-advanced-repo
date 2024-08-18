@@ -6,12 +6,12 @@
 // 4. Створіть статичний метод в класі Book, який буде приймати масив об'єктів(екземрлярів) книг та повертати найдавнішу книгу за роком видання. Викличте його в коді передавши масив книг (серед них мають бути екземляри обох класів Book та EBook)
 // 5. Створіть статичний метод для EBook який буде приймати як аргументи екземпляр класу Book і формат файлу як рядок ****та повертати екземпляр класу EBook
 
-import { Book } from "./Book.js";
-import { EBook } from "./EBook.js";
+import { Book } from './Book.js';
+import { EBook } from './EBook.js';
 
-const book1 = new Book("Jhon", "Author Jhon", 1999);
-const book2 = new Book("Tom", "Author Tom", 1998);
-const bookE = new EBook("Mac", "Author Mac", 2000, ".pdf");
+const book1 = new Book('Jhon', 'Author Jhon', 1999);
+const book2 = new Book('Tom', 'Author Tom', 1998);
+const bookE = new EBook('Mac', 'Author Mac', 2000, '.pdf');
 
 book1.printInfo();
 book2.printInfo();
@@ -19,8 +19,8 @@ bookE.printInfo();
 
 const books = [book1, book2, bookE];
 const oldestBook = Book.getOldestBookAndEBook(books);
-console.log("The oldest book is:");
+console.log('The oldest book is:');
 oldestBook.printInfo();
 
-const newEBook = EBook.createEBookFromBook(book1, ".txt");
+const newEBook = EBook.createEBookFromBook(book1, '.txt');
 newEBook.printInfo();
