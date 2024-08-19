@@ -8,12 +8,12 @@
 // Виведіть оновлений об'єкт person в консоль.
 
 let person = {
-  firstName: "mr.Tom",
-  lastName: "MacDonald",
-  age: 300,
+	firstName: 'mr.Tom',
+	lastName: 'MacDonald',
+	age: 300,
 };
 
-person.email = "tom.macdonald@email.com";
+person.email = 'tom.macdonald@email.com';
 
 delete person.age;
 

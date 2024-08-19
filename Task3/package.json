@@ -1,16 +1,16 @@
 {
-  "name": "aqa-js-advanced-repo",
-  "version": "1.0.0",
-  "description": "First text # aqa-js-advanced-repo",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "chalk": "^5.3.0"
-  },
-  "type": "module"
+	"name": "aqa-js-advanced-repo",
+	"version": "1.0.0",
+	"description": "First text # aqa-js-advanced-repo",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node index.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"chalk": "^5.3.0"
+	},
+	"type": "module"
 }

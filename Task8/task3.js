@@ -11,15 +11,15 @@
 // Виведіть об'єкт car3 в консоль.
 
 const car1 = {
-  brand: "Some brand Car1",
-  model: "Some model Car1",
-  year: 1980,
+	brand: 'Some brand Car1',
+	model: 'Some model Car1',
+	year: 1980,
 };
 
 const car2 = {
-  brand: "Some brand Car2",
-  model: "Some model Car2",
-  owner: 1990,
+	brand: 'Some brand Car2',
+	model: 'Some model Car2',
+	owner: 1990,
 };
 
 const car3 = { ...car1, ...car2 };

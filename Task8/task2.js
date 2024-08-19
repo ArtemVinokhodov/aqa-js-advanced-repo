@@ -7,9 +7,9 @@
 // Виведіть деструктуризовані змінні в консоль
 
 const book = {
-  title: "Some Book",
-  author: "No name author",
-  year: 1980,
+	title: 'Some Book',
+	author: 'No name author',
+	year: 1980,
 };
 
 console.log(book);
