@@ -13,19 +13,19 @@
     "sourceType": "module"
   },
   "rules": {
-    // "prettier/prettier": [
-    //   "error",
-    //   {
-    //     "singleQuote": true,
-    //     "semi": true,
-    //     "bracketSpacing": true,
-    //     "useTabs": true,
-    //     "printWidth": 120,
-    //     "endOfLine": "lf"
-    //   }
-    // ],
-    // "no-unused-vars": "warn",
-    // "no-console": "off"
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "semi": true,
+        "bracketSpacing": true,
+        "useTabs": true,
+        "printWidth": 120,
+        "endOfLine": "lf"
+      }
+    ],
+    "no-unused-vars": "warn",
+    "no-console": "off"
   }
 }
 
