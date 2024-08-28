@@ -17,10 +17,6 @@ build/
 .env
 .env.local
 
-coverage/
-*.test.js
-*.spec.js
-
 .DS_Store
 Thumbs.db
 
