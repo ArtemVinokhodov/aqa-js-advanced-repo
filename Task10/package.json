@@ -1,0 +1,11 @@
+{
+	"name": "task10",
+	"version": "1.0.0",
+	"main": "task1.js",
+	"scripts": {
+		"start:task1": "node task1.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"description": ""
+}
