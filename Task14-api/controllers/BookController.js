@@ -37,4 +37,3 @@ class BookController extends BaseController {
 module.exports = new BookController();
 
 
-  

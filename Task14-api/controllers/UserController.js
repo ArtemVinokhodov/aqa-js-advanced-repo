@@ -1,3 +1,4 @@
+const axios = require('axios');
 const BaseController = require('./BaseController');
 
 class UserController extends BaseController {
@@ -18,8 +19,17 @@ class UserController extends BaseController {
     return response;
   }
 
+  async getUserIdInloginUser(userName, password) {
+    const customClient = axios.create({
+      baseURL: 'https://demoqa.com',
+      headers: { 'Content-Type': 'application/json' },
+    });
+    const response = await customClient.post('/Account/v1/Login', { userName, password });
+    return response.data.userId;
+  }
+
   async getUserId() {
-    return "78508fb7-b538-4a94-9163-ec0012a7a055";
+    return await this.getUserIdInloginUser("artem", "Ghfdk12/33!");
   }
 }
 
