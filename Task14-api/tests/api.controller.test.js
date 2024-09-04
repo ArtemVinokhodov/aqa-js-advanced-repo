@@ -5,22 +5,21 @@
 // У тестах робити перевірки через expect
 // Використовувати контролери у тестах
 
-const BookController = require("../controllers/BookController")
-const UserController = require("../controllers/UserController")
+const BookController = require("../controllers/BookController");
+const UserController = require("../controllers/UserController");
 
 describe("test block", () => {
   let token;
-  beforeAll(async () => {
-    token = await UserController.getAuthToken(
-      "artem",
-      "Ghfdk12/33!"
-    );
-  });
+  let userId;
 
+  beforeAll(async () => {
+    token = await UserController.getAuthToken("artem", "Ghfdk12/33!");
+    userId = await UserController.getUserId();
+  });
 
   test('GET a list of books', async () => {
     const books = await BookController.getBooks();
-    expect(books).toBeInstanceOf(Object);
+    expect(books).toBeInstanceOf(Array);
     expect(books.length).toBeGreaterThan(0);
   });
 
@@ -34,27 +33,20 @@ describe("test block", () => {
   });
 
   test('POST add a new book to user\'s collection', async () => {
-    const userId = await UserController.getUserId();
-    //const token = await UserController.getAuthToken("artem", "Ghfdk12/33!");
     const bookIsbn = '9781449325862';
-    
-    const response = await BookController.addBookToUser(userId, bookIsbn);
-    expect(response).toBeDefined();
-    expect(response.status).toBe(200);
+    const response = await BookController.addBookToUser(userId, bookIsbn, token);
+
+    expect(response.status).toBe(201);
+    expect(response.books).toContainEqual({ isbn: bookIsbn });
   });
 
   test('DELETE remove a book from user\'s collection', async () => {
-    const userId = await UserController.getUserId();
-    //const token = await UserController.getAuthToken("artem", "Ghfdk12/33!");
     const bookIsbn = '9781449325862';
-    
     const response = await BookController.removeBookFromUser(userId, bookIsbn, token);
     expect(response.status).toBe(204);
   });
 
   test('Get token', async () => {
-    const token = await UserController.getAuthToken("artem", "Ghfdk12/33!");
     expect(token).toBeDefined();
-  
   });
 });
